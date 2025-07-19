@@ -72,6 +72,6 @@ void heapSortUsingMinHeap(vector<int> &heap) {
 
 int main() {
     vector<int> v = {1, 3, 5, 3 , 53, 63, 34, 246, 12, 24, 6};
-    heapSortUsingMinHeap(v);
+    heapSort(v);
     for(auto it : v) cout << it << " ";
 }
