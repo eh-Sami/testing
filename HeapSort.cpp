@@ -63,13 +63,9 @@ void heapSort(vector<int> &heap) {
 
 void heapSortUsingMinHeap(vector<int> &heap) {
     int size = heap.size();
-    // for(int i = size / 2 - 1; i >= 0; i--) {
-    //     maxHeapify(heap, size, i);
-    // }
     
 
     for(int i = 0; i < size; i++) {
-        // swap(heap[0], heap[i]);
         buildMinHeap(heap, i);
     }
 }
