@@ -65,4 +65,6 @@ int main() {
     vector<int> v = {1, 3, 5, 3 , 53, 63, 34, 246, 12, 24, 6};
     heapSort(v);
     for(auto it : v) cout << it << " ";
+    cout << endl;
+    return 0;
 }
