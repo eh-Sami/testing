@@ -31,14 +31,14 @@ void merge2array(vector<int> &arr, int low, int mid, int high)
         arr[i] = temp[i - low];
 }
 
-void mergesort(vector<int> &arr, int low, int high)
+int mergesort(vector<int> &arr, int low, int high)
 {
     int mid = (low + high) / 2;
-    if (low == high) return;
+    if (low == high) return 0;
     mergesort(arr, low, mid);
     mergesort(arr, mid + 1, high);
-    vector<int> temp(high - low + 1);
     merge2array(arr, low, mid, high);
+    // vector<int> temp(high - low + 1);
     // merge(arr.begin() + low, arr.begin() + mid + 1, arr.begin() + mid + 1, arr.begin() + high + 1, temp.begin(), greater<>());
     // copy(temp.begin(), temp.end(), arr.begin() + low);
 }
@@ -50,7 +50,9 @@ int main()
     vector<int> arr(n);
     for (int i = 0; i < n; i++)
         cin >> arr[i];
-    mergesort(arr, 0, n - 1);
+    int res = mergesort(arr, 0, n - 1);
     for (auto it : arr)
         cout << it << " ";
+    cout << endl;
+    cout << res;
 }
